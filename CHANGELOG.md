@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.6] - 2025-05-16
+### Added
+- Unit tests for BookService covering all CRUD methods and service logic.
+
 ## [0.0.5] - 2025-05-16
 ### Added
 - Unit tests for BookController covering all endpoints.
