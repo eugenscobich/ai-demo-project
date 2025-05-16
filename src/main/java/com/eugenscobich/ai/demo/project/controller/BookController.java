@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import com.eugenscobich.ai.demo.project.entity.BookEntity;
 
 @RestController
 @RequestMapping("/books")
@@ -16,7 +17,7 @@ public class BookController {
     private final BookService bookService;
 
     @GetMapping
-    public List<String> getAllBooks() {
+    public List<BookEntity> getAllBooks() {
         return bookService.getBooks();
     }
 }
