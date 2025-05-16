@@ -16,7 +16,7 @@ public class BookController {
     private final BookService bookService;
 
     @GetMapping
-    public List<String> getAllBooks() {
+    public List<com.eugenscobich.ai.demo.project.entity.BookEntity> getAllBooks() {
         return bookService.getBooks();
     }
 }
