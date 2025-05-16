@@ -1,12 +1,18 @@
 package com.eugenscobich.ai.demo.project.service;
 
 import org.springframework.stereotype.Service;
-import java.util.Arrays;
+import com.eugenscobich.ai.demo.project.entity.BookEntity;
+import com.eugenscobich.ai.demo.project.repository.BookRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class BookService {
-    public List<String> getBooks() {
-        return Arrays.asList("Harry Potter", "The Hobbit", "1984");
+    private final BookRepository bookRepository;
+
+    public List<BookEntity> getBooks() {
+        return bookRepository.findAll();
     }
 }
