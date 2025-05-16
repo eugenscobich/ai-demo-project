@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.4] - 2025-05-16
+### Added
+- Spring Security with HTTP Basic authentication using in-memory credentials. Username and password are configured via `application.yml`.
+
 ## [0.0.3] - 2025-05-16
 ### Added
 - CRUD endpoints (get by id, create, update, delete) for BookEntity via BookController & BookService.
