@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.2] - 2025-05-16
+### Added
+- PostgreSQL 17 integration via application.properties and Maven dependency.
+- JPA entity BookEntity with id (sequence), name, isbn fields.
+- BookRepository interface using Spring Data JPA.
+- BookService now loads book data from repository.
+
 ## [0.0.1] - 2025-05-16
 ### Added
 - Used Lombok's @RequiredArgsConstructor in BookController, removed manual constructor injection.
