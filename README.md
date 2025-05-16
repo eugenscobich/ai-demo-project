@@ -48,4 +48,3 @@ This project is a demo backend application for a books store. It uses Spring Boo
 See `CHANGELOG.md` for detailed changes.
 
 ---
-Demo project for demonstration and educational purposes.
