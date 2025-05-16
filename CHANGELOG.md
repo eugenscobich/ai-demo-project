@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.5] - 2025-05-16
+### Added
+- Unit tests for BookController covering all endpoints.
+
 ## [0.0.4] - 2025-05-16
 ### Added
 - Spring Security with HTTP Basic authentication using in-memory credentials. Username and password are configured via `application.yml`.
