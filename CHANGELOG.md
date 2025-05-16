@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.3] - 2025-05-16
+### Added
+- CRUD endpoints (get by id, create, update, delete) for BookEntity via BookController & BookService.
+
 ## [0.0.2] - 2025-05-16
 ### Added
 - PostgreSQL 17 integration via application.properties and Maven dependency.
