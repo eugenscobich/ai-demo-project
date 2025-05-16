@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.6] - 2025-05-16
+### Added
+- Unit tests for BookService covering all public methods in the service layer.
+
 ## [0.0.5] - 2025-05-16
 ### Added
 - Unit tests for BookController covering all endpoints.
