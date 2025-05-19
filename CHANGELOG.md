@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.7] - 2025-05-19
+### Added
+- Integrated Flyway database migration system and created initial migration script for 'books' table.
+- Configured Spring Boot JPA to validate schema via Hibernate and to use Flyway for managing migrations.
+- Updated application.yml and pom.xml to support Flyway migrations.
+
+
 ## [0.0.6] - 2025-05-16
 ### Added
 - Unit tests for BookService covering get, getById, create, update, and delete.
