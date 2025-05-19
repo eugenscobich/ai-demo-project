@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.7] - 2025-05-19
+### Added
+- Added React frontend app under /frontend using Create React App structure.
+- Integrated frontend build with Maven using frontend-maven-plugin.
+- Simple React screen to display list of books fetched from /api/books REST endpoint.
+
 ## [0.0.6] - 2025-05-16
 ### Added
 - Unit tests for BookService covering get, getById, create, update, and delete.
