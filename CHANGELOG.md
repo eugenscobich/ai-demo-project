@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 ### Added
+- JKNIG-6: Added unit tests for BookController (controller layer) covering all main endpoints using Mockito and MockMvc.
+### Added
 - JKNIG-5: Added Flyway database migration, initial migration for books table, configured Spring Boot to use migrations and validate with Hibernate.
 
 ### Added
