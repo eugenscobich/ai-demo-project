@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 ### Added
+- JKNIG-7: Added unit tests for BookService (service layer) with coverage for all CRUD methods and list functionality.
+### Added
 - JKNIG-5: Added Flyway database migration, initial migration for books table, configured Spring Boot to use migrations and validate with Hibernate.
 
 ### Added
