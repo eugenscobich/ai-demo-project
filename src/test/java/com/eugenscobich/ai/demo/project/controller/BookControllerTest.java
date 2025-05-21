@@ -13,7 +13,6 @@ import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.util.Arrays;
 import java.util.List;
@@ -21,6 +20,7 @@ import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(BookController.class)
@@ -85,7 +85,8 @@ class BookControllerTest {
         Mockito.when(bookService.createBook(any(BookEntity.class))).thenReturn(saved);
         mockMvc.perform(MockMvcRequestBuilders.post("/api/books")
             .contentType(MediaType.APPLICATION_JSON)
-            .content("{\"name\":\"New Book\",\"isbn\":\"NEWISBN\"}"))
+            .content("{\"name\":\"New Book\",\"isbn\":\"NEWISBN\"}")
+            .with(csrf()))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.id").value(10L))
             .andExpect(jsonPath("$.name").value("New Book"));
@@ -102,7 +103,8 @@ class BookControllerTest {
         Mockito.when(bookService.updateBook(eq(2L), any(BookEntity.class))).thenReturn(Optional.of(updated));
         mockMvc.perform(MockMvcRequestBuilders.put("/api/books/2")
             .contentType(MediaType.APPLICATION_JSON)
-            .content("{\"name\":\"Updated Book\",\"isbn\":\"UPDATEDISBN\"}"))
+            .content("{\"name\":\"Updated Book\",\"isbn\":\"UPDATEDISBN\"}")
+            .with(csrf()))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.id").value(2L))
             .andExpect(jsonPath("$.name").value("Updated Book"))
@@ -116,7 +118,8 @@ class BookControllerTest {
         Mockito.when(bookService.updateBook(eq(99L), any(BookEntity.class))).thenReturn(Optional.empty());
         mockMvc.perform(MockMvcRequestBuilders.put("/api/books/99")
             .contentType(MediaType.APPLICATION_JSON)
-            .content("{\"name\":\"Ignored\",\"isbn\":\"IGNORED\"}"))
+            .content("{\"name\":\"Ignored\",\"isbn\":\"IGNORED\"}")
+            .with(csrf()))
             .andExpect(status().isNotFound());
     }
 
@@ -125,7 +128,8 @@ class BookControllerTest {
     @WithMockUser
     void deleteBook_deleted() throws Exception {
         Mockito.when(bookService.deleteBook(5L)).thenReturn(true);
-        mockMvc.perform(MockMvcRequestBuilders.delete("/api/books/5"))
+        mockMvc.perform(MockMvcRequestBuilders.delete("/api/books/5")
+            .with(csrf()))
             .andExpect(status().isNoContent());
     }
 
@@ -134,7 +138,8 @@ class BookControllerTest {
     @WithMockUser
     void deleteBook_notFound() throws Exception {
         Mockito.when(bookService.deleteBook(99L)).thenReturn(false);
-        mockMvc.perform(MockMvcRequestBuilders.delete("/api/books/99"))
+        mockMvc.perform(MockMvcRequestBuilders.delete("/api/books/99")
+            .with(csrf()))
             .andExpect(status().isNotFound());
     }
 }
