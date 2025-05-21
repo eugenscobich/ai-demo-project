@@ -5,8 +5,12 @@ spring:
     password: demo_pass
     driver-class-name: org.postgresql.Driver
 
+  flyway:
+    enabled: true
+    validate-on-migrate: true
+    locations: classpath:db/migration
+
 # Spring Security - in-memory authentication
-spring:
   security:
     user:
       name: admin
@@ -14,7 +18,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
