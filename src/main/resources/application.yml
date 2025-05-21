@@ -4,6 +4,14 @@ spring:
     username: demo_user
     password: demo_pass
     driver-class-name: org.postgresql.Driver
+
+# Spring Security - in-memory authentication
+spring:
+  security:
+    user:
+      name: admin
+      password: admin123
+
   jpa:
     hibernate:
       ddl-auto: update

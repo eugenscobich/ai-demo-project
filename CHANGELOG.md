@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 ### Added
+- JKNIG-4: Added Spring Security with HTTP Basic authentication using in-memory credentials configured in application.yml. All endpoints now require authentication.
+### Added
 - JKNIG-3: Added CRUD operations (get by id, create, update, delete) endpoints for BookEntity in BookController and BookService.
 
 ### Added
