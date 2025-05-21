@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 ### Added
+- JKNIG-6: Added comprehensive unit tests for BookController with all REST endpoints covered, including CRUD and error cases. Security disabled in tests for controller coverage.
+
+### Added
 - JKNIG-5: Added Flyway database migration, initial migration for books table, configured Spring Boot to use migrations and validate with Hibernate.
 
 ### Added
