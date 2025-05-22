@@ -14,7 +14,6 @@ Backend Java skeleton project for Book Store
 ## How to build and run
 
 ```bash
-cd ai-demo-project
 mvn clean package
 java -jar target/ai-demo-project-0.0.1-SNAPSHOT.jar
 ```
