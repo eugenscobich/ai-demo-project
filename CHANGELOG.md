@@ -6,3 +6,6 @@
 - Model: Book
 - Service: `BookService` returning dummy books
 - REST Controller: `/api/books` endpoint
+
+### Removed
+- Deleted empty application.properties
