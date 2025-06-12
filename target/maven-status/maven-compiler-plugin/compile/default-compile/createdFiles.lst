@@ -1,0 +1,4 @@
+com/eugenscobich/ai/demo/project/Application.class
+com/eugenscobich/ai/demo/project/model/Book.class
+com/eugenscobich/ai/demo/project/controller/BookController.class
+com/eugenscobich/ai/demo/project/service/BookService.class
