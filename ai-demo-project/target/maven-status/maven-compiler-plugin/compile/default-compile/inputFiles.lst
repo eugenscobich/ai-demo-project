@@ -1,0 +1,4 @@
+/app/0f5228eb-33b0-415d-a7d4-6578b18fcdc2/ai-demo-project/src/main/java/com/eugenscobich/ai/demo/project/Application.java
+/app/0f5228eb-33b0-415d-a7d4-6578b18fcdc2/ai-demo-project/src/main/java/com/eugenscobich/ai/demo/project/model/Book.java
+/app/0f5228eb-33b0-415d-a7d4-6578b18fcdc2/ai-demo-project/src/main/java/com/eugenscobich/ai/demo/project/controller/BookController.java
+/app/0f5228eb-33b0-415d-a7d4-6578b18fcdc2/ai-demo-project/src/main/java/com/eugenscobich/ai/demo/project/service/BookService.java
