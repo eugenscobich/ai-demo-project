@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.2] - Use Lombok in BookController
+### Changed
+- Applied Lombok's @RequiredArgsConstructor to BookController for constructor generation
+
 ## [0.0.1] - Initial skeleton
 ### Added
 - Maven project setup (Java 21, Spring Boot 3.4.4)
