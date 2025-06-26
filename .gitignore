@@ -1,0 +1,16 @@
+# Maven & Java
+/target/
+/.idea/
+*.iml
+*.log
+*.class
+*.jar
+*.war
+*.ear
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Others
+.env
